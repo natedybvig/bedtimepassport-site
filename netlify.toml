@@ -1,0 +1,24 @@
+# Netlify settings for bedtimepassport.com
+# The site is plain HTML: no build step, publish this folder as-is.
+[build]
+  publish = "."
+  command = ""
+
+# Send the bare domain to www so there is one address.
+[[redirects]]
+  from = "https://bedtimepassport.com/*"
+  to = "https://www.bedtimepassport.com/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
