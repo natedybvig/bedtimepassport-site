@@ -9,6 +9,7 @@ The landing page for the Bedtime Passport books. It is plain HTML and CSS with n
 | `index.html` | The landing page |
 | `styles.css` | All the styling |
 | `thanks.html` | The page people see after they sign up |
+| `free/bedtime-passport-night-1-iceland.pdf` | The free Night 1 story; thanks.html links to it as the sign-up gift |
 | `404.html` | Shown for any address that doesn't exist |
 | `favicon.svg` | The little icon in the browser tab |
 | `netlify.toml` | Netlify settings (no build, redirects, cache) |
