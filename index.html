@@ -182,18 +182,12 @@
     <div class="wrap signup-grid">
       <div>
         <h2 id="updates-title">Get the first bedtime story free</h2>
-        <p>Leave your email and you’ll get all of Night 1, Iceland, as a printable story with its picture, map and pronunciation guide. Read it tonight. After that, we’ll write when each new book comes out, about once a month until all seven are out. No spam, and you can unsubscribe any time.</p>
+        <p>Subscribe and you’ll get all of Night 1, Iceland, by email as a printable story with its picture, map and pronunciation guide. Read it tonight. After that, we’ll write when each new book comes out, about once a month until all seven are out. No spam, and you can unsubscribe any time.</p>
       </div>
-      <form name="updates" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="updates">
-        <p class="hidden"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <div class="form-row">
-          <label for="email">Your email address</label>
-          <input id="email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
-          <button class="btn btn-gold" type="submit">Send me the free story</button>
-        </div>
-        <p class="form-note">Your download opens right after you sign up. We only use your address to tell you about Bedtime Passport.</p>
-      </form>
+      <div class="substack-form">
+        <iframe src="https://bedtimepassport.substack.com/embed" title="Sign up for the free Bedtime Passport story" height="320" frameborder="0" scrolling="no"></iframe>
+        <p class="form-note">The free story arrives in your welcome email. We only use your address to tell you about Bedtime Passport.</p>
+      </div>
     </div>
   </section>
 
