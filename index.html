@@ -119,10 +119,10 @@
             </div>
           </div>
           <div>
-            <p class="when">Book 1, out December 1, 2026</p>
+            <p class="when" data-launched="Book 1, out now">Book 1, out December 1, 2026</p>
             <h3>Northern Lights, Snow Monkeys &amp; a Moose Who Can Fly</h3>
             <p>Watch the ground breathe steam in Iceland, feed breakfast to baby elephants in Kenya, soak in a hot spring with snow monkeys in Japan, and float on a giant mirror of salt in Bolivia.</p>
-            <a class="btn btn-blue" href="https://www.amazon.com/dp/B0HS95VHGN">Pre-order on Amazon</a>
+            <a class="btn btn-blue" href="https://www.amazon.com/dp/B0HS95VHGN" data-launched="Get it on Amazon">Pre-order on Amazon</a>
           </div>
         </article>
 
@@ -136,10 +136,10 @@
             </div>
           </div>
           <div>
-            <p class="when">Book 2, out December 1, 2026</p>
+            <p class="when" data-launched="Book 2, out now">Book 2, out December 1, 2026</p>
             <h3>A Leaning Tower, Pyramids &amp; a Moose Who Can Fly</h3>
             <p>Help hold up the Leaning Tower of Pisa, drift down the Nile past the pyramids, watch tiger cubs splash in an Indian forest, and clap at a Maya pyramid that chirps back like a bird.</p>
-            <a class="btn btn-blue" href="https://www.amazon.com/dp/B0HS9MV5TW">Find it on Amazon</a>
+            <a class="btn btn-blue" href="https://www.amazon.com/dp/B0HS9MV5TW" data-launched="Get it on Amazon">Pre-order on Amazon</a>
           </div>
         </article>
       </div>
@@ -213,5 +213,14 @@
     <p><a href="mailto:hello@bedtimepassport.com">hello@bedtimepassport.com</a></p>
   </div>
 </footer>
+<script>
+  // On launch day (midnight Central, Dec 1, 2026) swap the pre-order wording for "out now" wording.
+  (function () {
+    if (Date.now() < Date.parse("2026-12-01T06:00:00Z")) return;
+    document.querySelectorAll("[data-launched]").forEach(function (el) {
+      el.textContent = el.getAttribute("data-launched");
+    });
+  })();
+</script>
 </body>
 </html>
