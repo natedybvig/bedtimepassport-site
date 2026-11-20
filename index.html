@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://www.bedtimepassport.com/">
   <meta property="og:title" content="Bedtime Passport">
   <meta property="og:description" content="Tour every country on Earth, one bedtime story at a time.">
-  <meta property="og:image" content="https://www.bedtimepassport.com/images/og-image.jpg">
+  <meta property="og:image" content="https://www.bedtimepassport.com/images/og-image.jpeg">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -182,12 +182,19 @@
     <div class="wrap signup-grid">
       <div>
         <h2 id="updates-title">Get the first bedtime story free</h2>
-        <p>Subscribe and you’ll get all of Night 1, Iceland, as a printable story with its picture, map and pronunciation guide. Read it tonight. After that, we’ll write when each new book comes out, about once a month until all seven are out. No spam, and you can unsubscribe any time.</p>
+        <p>Enter your email and Night 1, Iceland, opens right away, with its picture, map, pronunciation guide and a printable PDF. Read it tonight. After that, we’ll write when each new book comes out, about once a month until all seven are out. No spam, and you can unsubscribe any time.</p>
       </div>
-      <div class="substack-form">
-        <iframe src="https://bedtimepassport.substack.com/embed" title="Sign up for the free Bedtime Passport story" height="320" frameborder="0" scrolling="no"></iframe>
-        <p class="story-now">Subscribed? Your story is ready now. <a class="btn btn-gold" href="/free/iceland.html">Read it now</a> <a class="story-pdf" href="/free/bedtime-passport-night-1-iceland.pdf" download>or download the printable PDF</a></p>
-        <p class="form-note">We’ll also email you a copy, along with a quick confirmation from Substack. We only use your address to tell you about Bedtime Passport.</p>
+      <div>
+        <form name="free-story" method="POST" action="/free/iceland.html" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="free-story">
+          <p class="hidden"><label>Leave this empty: <input name="company" tabindex="-1" autocomplete="off"></label></p>
+          <div class="form-row">
+            <label for="signup-email">Your email</label>
+            <input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+            <button class="btn btn-gold" type="submit">Send me the story</button>
+          </div>
+        </form>
+        <p class="form-note">We only use your address to tell you about Bedtime Passport.</p>
       </div>
     </div>
   </section>
