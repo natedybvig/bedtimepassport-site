@@ -16,3 +16,11 @@
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Private Book 1 preview: keep it out of search engines.
+# (Not listed in robots.txt on purpose, so the address stays unadvertised.)
+[[headers]]
+  for = "/preview/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-cache"

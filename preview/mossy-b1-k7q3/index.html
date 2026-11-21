@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bedtime Passport, Book 1: Northern Lights, Snow Monkeys &amp; a Moose Who Can Fly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --night:#0E1B31; --card:#1B2E4F; --cream:#E8D6A6; --text:#DCE3EE; --muted:#9FB0C8; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--night); color:var(--text); font-family:"Spectral", Georgia, serif; font-size:1.2rem; line-height:1.75; }
+.wrap { width:min(38rem, 100% - 2.4rem); margin-inline:auto; }
+header.top { display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:1.1rem 0; font-size:.95rem; }
+.brand { font-family:"Courier Prime", monospace; font-weight:700; letter-spacing:.14em; color:var(--cream); text-decoration:none; }
+a { color:var(--cream); text-underline-offset:.18em; }
+img { max-width:100%; height:auto; display:block; }
+.hero img { width:100%; border-radius:10px; }
+.kicker { font-family:"Courier Prime", monospace; color:var(--cream); letter-spacing:.12em; font-size:.9rem; margin:1.6rem 0 .2rem; }
+h1 { font-weight:400; font-size:clamp(2rem, 1.5rem + 2.5vw, 2.8rem); line-height:1.15; color:#fff; margin:0 0 .4rem; }
+.sub { color:var(--muted); font-style:italic; margin:0 0 1.4rem; }
+details { background:var(--card); border-radius:10px; padding:.2rem 1.2rem; margin:0 0 .8rem; }
+summary { cursor:pointer; padding:.8rem 0; color:#fff; font-weight:600; font-size:1.05rem; }
+details[open] { padding-bottom:1rem; }
+dl { margin:0; font-size:1rem; line-height:1.55; }
+dt { color:var(--cream); font-weight:600; margin-top:.7rem; } dd { margin:0; }
+details ul { margin:0; padding-left:1.1rem; font-size:1rem; line-height:1.55; } details li { margin-bottom:.6rem; }
+details img { border-radius:8px; margin:.3rem 0 .4rem; }
+.cap { font-size:.9rem; color:var(--muted); font-style:italic; margin:0; }
+.tip { font-size:1rem; color:var(--muted); margin:1.2rem 0 2rem; }
+.story p { margin:0 0 1.15rem; }
+.story p:first-child { font-size:1.4rem; color:#fff; }
+.off { text-align:center; color:var(--cream); font-weight:600; font-style:italic; font-size:1.3rem; margin:2.2rem 0 1.4rem; }
+.seed { border:1px solid rgba(232,214,166,.35); border-radius:12px; padding:1.2rem 1.4rem; margin-bottom:2.4rem; }
+.seed h2 { font-size:1rem; font-weight:600; color:var(--cream); margin:0 0 .4rem; }
+.seed p { font-style:italic; margin:0; line-height:1.9; }
+.pager { display:flex; justify-content:space-between; gap:.8rem; border-top:1px solid rgba(232,214,166,.2); padding:1.6rem 0 2rem; }
+.btn { display:inline-block; font-weight:600; font-size:1rem; padding:.65rem 1.1rem; border-radius:6px; text-decoration:none; border:2px solid var(--cream); line-height:1.3; }
+.btn-gold { background:var(--cream); color:var(--night); } .btn-line { color:var(--cream); }
+.pager .btn { max-width:48%; } .pager .next { margin-left:auto; text-align:right; }
+.pager small { display:block; font-weight:400; font-size:.82rem; opacity:.85; }
+/* contents */
+.cover { text-align:center; padding:1.5rem 0 1rem; }
+.cover .series { font-family:"Courier Prime", monospace; letter-spacing:.28em; color:var(--cream); font-size:.95rem; margin:0; }
+.cover h1 { margin:.6rem 0 .3rem; }
+.cover .by { color:var(--muted); margin:0 0 1.4rem; }
+.note { font-size:1.08rem; }
+.ded { font-style:italic; color:var(--muted); text-align:center; font-size:1rem; margin:1.6rem 0 2.4rem; }
+.week { margin:2.4rem 0 0; }
+.week h2 { font-family:"Courier Prime", monospace; font-size:.9rem; letter-spacing:.12em; color:var(--cream); margin:0; font-weight:700; }
+.week h3 { font-weight:400; color:#fff; font-size:1.45rem; margin:.1rem 0 .8rem; line-height:1.25; }
+.week > img { border-radius:8px; margin-bottom:.9rem; }
+.toc { list-style:none; margin:0; padding:0; }
+.toc a { display:flex; gap:.9rem; align-items:center; text-decoration:none; color:var(--text); padding:.55rem .4rem; border-radius:8px; }
+.toc a:hover, .toc a:focus-visible { background:var(--card); }
+.toc img { width:5.6rem; aspect-ratio:16/7; object-fit:cover; border-radius:6px; flex:none; }
+.toc .num { font-family:"Courier Prime", monospace; color:var(--cream); font-size:.8rem; letter-spacing:.08em; display:block; }
+.toc .t { font-size:1rem; line-height:1.35; display:block; }
+.start { text-align:center; margin:1.4rem 0 0; }
+.about { border-top:1px solid rgba(232,214,166,.2); margin-top:3rem; padding:2rem 0 1rem; }
+.about .row { display:flex; gap:1.2rem; align-items:flex-start; }
+.about img { width:6.5rem; border-radius:50%; flex:none; }
+.about h2 { font-weight:400; color:#fff; margin:0 0 .6rem; font-size:1.5rem; }
+.about p { font-size:1.02rem; margin:0 0 .9rem; }
+.preview { background:var(--card); border-radius:10px; padding:.9rem 1.2rem; font-size:.95rem; color:var(--muted); margin:1.2rem 0 1.6rem; }
+footer { font-size:.9rem; color:var(--muted); text-align:center; padding:1rem 0 2.5rem; }
+.loading { text-align:center; color:var(--muted); padding:4rem 0; }
+@media (max-width:30rem) { .about .row { flex-direction:column; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><p class="loading">Loading the book…</p></div>
+<script>
+const E = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let book, nights = [];
+const pad = n => String(n).padStart(2, '0');
+const title = t => t.toLowerCase().replace(/(^|\s)(\S)/g, (m, s, c) => s + c.toUpperCase());
+
+function header() {
+  return `<header class="top"><a class="brand" href="#contents">BEDTIME PASSPORT</a><a href="#contents">Contents</a></header>`;
+}
+
+function contents() {
+  const weeks = book.weeks.map(w => `
+    <section class="week">
+      <h2>WEEK ${w.week}</h2>
+      <h3>${E(w.region)}</h3>
+      <img src="${w.map}" alt="${E(w.map_alt)}" loading="lazy" width="1600" height="893">
+      <ul class="toc">${w.nights.map(n => `
+        <li><a href="#night-${pad(n.n)}"><img src="${n.img}" alt="" loading="lazy"><span><span class="num">NIGHT ${n.n} · ${E(n.country)}</span><span class="t">${E(n.title)}</span></span></a></li>`).join('')}
+      </ul>
+    </section>`).join('');
+  return `${header()}
+  <div class="cover">
+    <p class="series">BEDTIME PASSPORT · BOOK 1</p>
+    <h1>${E(book.title)}</h1>
+    <p class="by">by Daly Henrikson · 28 bedtime stories for ages ${E(book.ages)}</p>
+  </div>
+  <div class="hero"><img src="images/night01.jpg" alt="${E(nights[0].alt)}"></div>
+  <p class="preview">A private preview copy, shared with a few friends before anyone else. Please don’t pass the link along. Thank you for reading!</p>
+  <p class="note">${E(book.note_intro)}</p>
+  <p class="note">Each night takes about six minutes to read aloud. When Mossy says <b>“Goggles on!”</b>, make circles with your fingers over your eyes together. At the end, whisper the good night in that country’s language, then read the Dream Seed slowly as the lights go out.</p>
+  <p class="start"><a class="btn btn-gold" href="#night-01">Start with Night 1: Iceland</a></p>
+  <p class="ded">${E(book.dedication)}</p>
+  ${weeks}
+  <section class="about">
+    <div class="row"><img src="images/author.jpg" alt="${E(book.author_alt)}">
+      <div><h2>About the author</h2>${book.author.map(p => `<p>${E(p)}</p>`).join('')}</div></div>
+    ${book.series.map(p => `<p>${E(p)}</p>`).join('')}
+  </section>
+  <footer>© 2026 Daly Henrikson</footer>`;
+}
+
+function night(i) {
+  const n = nights[i], w = n.week, first = w.nights[0].n === n.n;
+  const stop = w.nights.indexOf(n) + 1;
+  const rows = [["Capital", n.capital], ["Key pronunciations", n.pronunciations], ["Historical anchor", n.anchor], ["Reading pace", "Calm and unhurried, about 6 minutes."]];
+  const prev = nights[i-1], next = nights[i+1];
+  return `${header()}
+  <div class="hero"><img src="${n.img}" alt="${E(n.alt)}"></div>
+  <p class="kicker">NIGHT ${n.n} · ${E(n.country)}</p>
+  <h1>${E(n.title)}</h1>
+  <p class="sub">Week ${w.week}: ${E(w.region)}</p>
+  <details><summary>For the grown-up: pronunciations and quick guide</summary>
+    <dl>${rows.map(([a,c]) => `<dt>${E(a)}</dt><dd>${E(c)}</dd>`).join('')}</dl></details>
+  <details><summary>Five quick facts about ${E(title(n.country))}</summary>
+    <ul>${n.facts.map(([l,t]) => `<li><b>${E(l)}</b> ${E(t)}</li>`).join('')}</ul></details>
+  <details${first ? ' open' : ''}><summary>This week’s map</summary>
+    <img src="${w.map}" alt="${E(w.map_alt)}" loading="lazy" width="1600" height="893">
+    <p class="cap">Week ${w.week}. Tonight is stop number ${stop}.</p></details>
+  <article class="story">${n.story.map(p => `<p>${E(p)}</p>`).join('')}</article>
+  <p class="off">Goggles off.</p>
+  <div class="seed"><h2>Dream Seed (read slowly as the lights go out)</h2><p>${E(n.dream_seed)}</p></div>
+  <nav class="pager">
+    ${prev ? `<a class="btn btn-line" href="#night-${pad(prev.n)}">← Night ${prev.n}<small>${E(title(prev.country))}</small></a>` : `<a class="btn btn-line" href="#contents">← Contents</a>`}
+    ${next ? `<a class="btn btn-gold next" href="#night-${pad(next.n)}">Night ${next.n} →<small>${E(title(next.country))}</small></a>` : `<a class="btn btn-gold next" href="#contents">The end · Contents</a>`}
+  </nav>
+  <footer>© 2026 Daly Henrikson · Private preview copy</footer>`;
+}
+
+function route() {
+  const app = document.getElementById('app');
+  const m = location.hash.match(/^#night-(\d+)$/);
+  const i = m ? parseInt(m[1], 10) - 1 : -1;
+  if (i >= 0 && i < nights.length) {
+    app.innerHTML = night(i);
+    document.title = `Night ${i+1}: ${title(nights[i].country)} | Bedtime Passport Book 1`;
+  } else {
+    app.innerHTML = contents();
+    document.title = 'Bedtime Passport, Book 1';
+  }
+  window.scrollTo(0, 0);
+}
+
+fetch('book.json').then(r => r.json()).then(b => {
+  book = b;
+  b.weeks.forEach(w => w.nights.forEach(n => { n.week = w; nights.push(n); }));
+  route();
+  window.addEventListener('hashchange', route);
+}).catch(() => {
+  document.getElementById('app').innerHTML = '<p class="loading">Sorry, the book didn’t load. Try refreshing the page.</p>';
+});
+</script>
+</body>
+</html>
