@@ -66,6 +66,10 @@ details img { border-radius:8px; margin:.3rem 0 .4rem; }
 .about img { width:6.5rem; border-radius:50%; flex:none; }
 .about h2 { font-weight:400; color:#fff; margin:0 0 .6rem; font-size:1.5rem; }
 .about p { font-size:1.02rem; margin:0 0 .9rem; }
+.series-box { background:var(--cream); color:#1F2A3D; border-radius:14px; padding:1.5rem 1.5rem 1.6rem; margin:1.8rem 0 0; text-align:center; box-shadow:0 6px 24px rgba(0,0,0,.35); }
+.series-box h2 { font-family:"Courier Prime", monospace; font-size:.85rem; letter-spacing:.14em; font-weight:700; color:#7A5A12; margin:0 0 .8rem; }
+.series-box p { font-size:1.02rem; line-height:1.65; margin:0 0 .8rem; }
+.series-box .btn { margin-top:.4rem; background:var(--night); color:var(--cream); border-color:var(--night); }
 .preview { background:var(--card); border-radius:10px; padding:.9rem 1.2rem; font-size:.95rem; color:var(--muted); margin:1.2rem 0 1.6rem; }
 footer { font-size:.9rem; color:var(--muted); text-align:center; padding:1rem 0 2.5rem; }
 .loading { text-align:center; color:var(--muted); padding:4rem 0; }
@@ -110,7 +114,11 @@ function contents() {
   <section class="about">
     <div class="row"><img src="images/author.jpg" alt="${E(book.author_alt)}">
       <div><h2>About the author</h2>${book.author.map(p => `<p>${E(p)}</p>`).join('')}</div></div>
-    ${book.series.map(p => `<p>${E(p)}</p>`).join('')}
+    <div class="series-box">
+      <h2>KEEP YOUR GOGGLES ON!</h2>
+      ${book.series.slice(1, -1).map(p => `<p>${E(p)}</p>`).join('')}
+      <a class="btn" href="https://www.bedtimepassport.com/#updates">Get new-book updates</a>
+    </div>
   </section>
   <footer>© 2026 Daly Henrikson</footer>`;
 }
